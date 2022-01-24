@@ -1,0 +1,63 @@
+include mixins.pug
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="css/swiper-bundle.min.css")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Портфолио веб-разработчика — фрилансера Анатолия Поршнева
+	body
+		header.header
+			.header__block
+				a(href="/").header__logo Povlu
+				.header__menu
+					span
+					span
+					span
+				nav.header__nav
+					ul.header__nav-list.flex
+						+headerNavItem('Обо мне')
+						+headerNavItem('Проекты')
+						+headerNavItem('Отзывы')
+						+headerNavItem('Блог')
+		.main__socials.flex
+			a(href="#!").main__social 
+				img(src="img/icons/telegram.svg", alt="Telegram" title="Telegram")
+			a(href="#!").main__social
+				img(src="img/icons/vk.svg", alt="Vk" title="VK")
+			a(href="#!").main__social
+				img(src="img/icons/instagram.svg", alt="Instagram" title="Instagram")
+		section.section.page-work(style="background-color:#1a4357")
+			.container
+				.blog__block
+					a(href="#!").blog__back.flex
+						img(src="img/icons/blog-arrow.svg", alt="")
+						.blog__back-title К списку проектов
+					h2.section__subtitle.page-work__title Верстка и правки “ULP Online School
+					.page-work__img
+						img(src="img/ulp.jpg", alt="")
+		section.section.page-work-content
+			.container
+				.row
+					.col-md-5
+						h2.page-work-content__title
+							span Задача: 
+							| Сверстать сайт и доработать правки
+					.col-md-1
+					.col-md-6
+						.page-work__tags.flex
+							.article__tag(style="background-color:tomato") WordPress
+							.article__tag(style="background-color:tomato") Верстка
+						.page-work__descr
+							p О чем проект: <span>ОНЛАЙН-ЗАНЯТИЯ: с русскоговорящим преподавателем и носителем языка</span>
+							p Старт работ: <span>Декабрь 2019</span>
+							p Цена: <span>2000 руб</span>
+							p Срок: <span>2-3 дня</span>
+						a(href="#!").page-work__link.btn.btn--white Перейти на сайт
+		footer.footer
+			.container
+				.footer__block.flex
+					.footer__copy @2020 Все права защищены
+		script(src="js/swiper-bundle.min.js")
+		script(src="js/script.min.js")

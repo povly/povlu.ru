@@ -30,7 +30,8 @@
   "dependencies": {
     "bootstrap": "^5.1.1",
     "jquery": "^3.6.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^7.4.1"
   },
   "browserslist": [
     "last 4 versions",

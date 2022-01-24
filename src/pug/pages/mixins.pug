@@ -1,0 +1,12 @@
+mixin headerNavItem(text)
+	li.header__nav-item
+		a(href="").header__nav-link= text
+mixin mainWorkItem(img, tag, title)
+	.col-md-6
+		.work
+			.work__new Новый 
+			a(href="#!").work__img
+				img(src=img, alt="")
+			.work__tag= tag
+			a(href="#!") 
+				h3.work__title= title

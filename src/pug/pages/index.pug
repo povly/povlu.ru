@@ -1,13 +1,256 @@
-extends ../layout/layout.pug
-block vars
-	- var title = 'Главная'; 
-block styles
-	include ../includes/styles/styles.pug
-block header 
-	include ../includes/header/header.pug
-block content
-	include ../includes/content/content-main.pug
-block footer
-	include ../includes/footer/footer.pug
-block scripts
-	include ../includes/scripts/scripts.pug
+include mixins.pug
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Портфолио веб-разработчика — фрилансера Анатолия Поршнева
+	body
+		include ../includes/header/header.pug
+		.main__socials.flex
+			a(href="#!").main__social 
+				img(src="img/icons/telegram.svg", alt="Telegram" title="Telegram")
+			a(href="#!").main__social
+				img(src="img/icons/vk.svg", alt="Vk" title="VK")
+			a(href="#!").main__social
+				img(src="img/icons/instagram.svg", alt="Instagram" title="Instagram")
+		section.main
+			.container
+				.row.main__row
+					.col-md-7
+						h1.main__title Веб-разработчик, фрилансер
+						p.main__descr Привет, меня зовут Анатолий Поршнев. Я занимаюсь разработкой и версткой сайта с нуля.
+						button.btn.btn--blue.main__button Обсудить проект
+					.col-md-5
+						.main__img.main__img--scale
+							img(src="img/anatoly.png" alt="Фото Анатолия Поршнева")
+							.main__circle.main__circle-1.circle
+							.main__circle.main__circle-2.circle
+							.main__circle.main__circle-3.circle
+		.main__form.flex
+			.main__form-body
+				form.main__form-item.flex
+					.main__form-close
+						span
+						span
+					.main__form-title Расскажите о вашем проекте
+					.main__form-subtitle Оставьте заявку 
+					input(type="email" name="main_email" placeholder="E-mail" required autocomplete="on | off")
+					input(type="text" name="main_name" placeholder="Имя и фамилия" required autocomplete="on | off")
+					textarea(name="main_message" placeholder="Опишите задачу" required autocomplete="on | off")
+					button(type="submit" value="Отправить") Отправить
+			.main__true
+				.main__true-close
+					span
+					span
+				.main__true-img
+					img(src="img/icons/gal.svg", alt="")
+				.main__true-title Спасибо!
+				.main__true-text Сообщение отправлено
+		section.section.main-about
+			.container
+				h2.section__subtitle Давайте знакомиться!
+				.row.main-about__row
+					.col-md-5
+						.main__img--scale
+							img(src="img/anatoly.png" alt="Фото Анатолия Поршнева")
+					.col-md-7
+						.main-about__text
+							p Привет! Я Поршнев Анатолий, мне 21 лет. Я веб-разработчик из Беларуси.
+							p В 2019 году закончил среднее образование “Программное обеспечение информационных технологий” и ушел в фриланс. 
+							p Разрабатываю и верстаю сайт с нуля с похожего сайта или дизайна. Настраиваю сайт под CMS Wordpress. Скоро буду разрабатывать сложные сайты на React.
+							p Ко мне вы можете обратиться за заказом разработки сайтов.
+				.main-about__advantage.flex
+					.main-about__advantage-item
+						.main-about__advantage-num 2
+						.main-about__advantage-title года опыта работы
+					.main-about__advantage-item
+						.main-about__advantage-num 50+
+						.main-about__advantage-title довольных клиентов
+					.main-about__advantage-item
+						.main-about__advantage-num 30+
+						.main-about__advantage-title реализованных проектов
+		section.section.main-work#work
+			.container
+				h2.section__subtitle Последние проекты
+				.row
+					+mainWorkItem('./img/ulp.jpg', 'WordPress', 'Верстка и правки “ULP Online School”')
+					+mainWorkItem('./img/pd.jpg', 'WordPress', 'Верстка и правки “ULP Online School”')
+					+mainWorkItem('./img/event.jpg', 'WordPress', 'Верстка и правки “ULP Online School”')
+				a(href="#!").btn.btn--white.section__button Посмотреть все проекты
+		section.section.main-advantage
+			.container
+				h2.section__subtitle Умения и навыки
+				.row.main-advantage__block
+					.col-md-6.col-xl-4.main-advantage__col
+						.main-advantage__item
+							.main-advantage__img
+								img(src="img/icons/programm.svg" alt="")
+							h3.main-advantage__title Программирование
+							.main-advantage__text
+								p JavaScript
+								p PHP
+					.col-md-6.col-xl-4.main-advantage__col
+						.main-advantage__item
+							.main-advantage__img
+								img(src="img/icons/cms.svg" alt="Работа с cms")
+							h3.main-advantage__title Работа с CMS
+							.main-advantage__text
+								p Wordpress
+					.col-md-6.col-xl-4.main-advantage__col
+						.main-advantage__item
+							.main-advantage__img
+								img(src="img/icons/code.svg" alt="")
+							h3.main-advantage__title Верстка
+							.main-advantage__text
+								p HTML5/PUG
+								p CSS/SASS
+					.col-md-6.col-xl-4.main-advantage__col
+						.main-advantage__item
+							.main-advantage__img
+								img(src="img/icons/box.svg" alt="")
+							h3.main-advantage__title Библиотеки
+							.main-advantage__text
+								p jQuery
+								p Bootstrap 4
+								p React.js
+					.col-md-6.col-xl-4.main-advantage__col
+						.main-advantage__item
+							.main-advantage__img
+								img(src="img/icons/framework.svg" alt="")
+							h3.main-advantage__title Сборщик задач
+							.main-advantage__text
+								p Gulp 4
+		section.section.main-reviews
+			.container
+				h2.section__subtitle Отзывы клиентов
+				.main-reviews__swiper
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.main-reviews__item
+									.row
+										.col-xl-3
+											.main-reviews__img
+												img(data-src="img/reviews/ulp.jpg", class="swiper-lazy")
+												.swiper-lazy-preloader.swiper-lazy-preloader-black
+											.main-reviews__socials.flex
+												a(href="#!").main-reviews__social
+													img(src="img/icons/vk.svg" alt="")
+												a(href="#!").main-reviews__social
+													img(src="img/icons/telegram.svg" alt="")
+											a(href="#!").main-reviews__link ulpschool.ru
+										.col-xl-9
+											h4.main-reviews__title Екатерина Новикова
+											.main-reviews__subtitle Основатель «ULP ONLINE SCHOOL»
+											.main-reviews__descr 
+												| Анатолий – Вы тот специалист, которого я так долго искала. Исполнительный, пунктуальный, понимаете, что от Вас хотят и выполняете задачу в кратчайшие сроки. 
+												| С Вами очень приятно работать, Вас не надо дергать, Вы обязательный человек. Терпеливо относитесь к заказчику и всем его требованиям. Готовы учиться новому и 
+												| успешно это делаете. Вывод – спасибо за Вашу быстро и качественно сделанную работу в кратчайшие сроки и за дополнительную помощь в подборе материала. Спасибо. 
+												| Надеюсь на дальнейшее сотрудничество.
+							.swiper-slide
+								.main-reviews__item
+									.row
+										.col-xl-3
+											.main-reviews__img
+												img(data-src="img/reviews/ulp.jpg", class="swiper-lazy")
+												.swiper-lazy-preloader.swiper-lazy-preloader-black
+											.main-reviews__socials.flex
+												a(href="#!").main-reviews__social
+													img(src="img/icons/vk.svg" alt="")
+												a(href="#!").main-reviews__social
+													img(src="img/icons/telegram.svg" alt="")
+											a(href="#!").main-reviews__link ulpschool.ru
+										.col-xl-9
+											h4.main-reviews__title Екатерина Новикова
+											.main-reviews__subtitle Основатель «ULP ONLINE SCHOOL»
+											.main-reviews__descr 
+												| Анатолий – Вы тот специалист, которого я так долго искала. Исполнительный, пунктуальный, понимаете, что от Вас хотят и выполняете задачу в кратчайшие сроки. 
+												| С Вами очень приятно работать, Вас не надо дергать, Вы обязательный человек. Терпеливо относитесь к заказчику и всем его требованиям. Готовы учиться новому и 
+												| успешно это делаете. Вывод – спасибо за Вашу быстро и качественно сделанную работу в кратчайшие сроки и за дополнительную помощь в подборе материала. Спасибо. 
+												| Надеюсь на дальнейшее сотрудничество.
+							.swiper-slide
+								.main-reviews__item
+									.row
+										.col-xl-3
+											.main-reviews__img
+												img(data-src="img/reviews/ulp.jpg", class="swiper-lazy")
+												.swiper-lazy-preloader.swiper-lazy-preloader-black
+											.main-reviews__socials.flex
+												a(href="#!").main-reviews__social
+													img(src="img/icons/vk.svg" alt="")
+												a(href="#!").main-reviews__social
+													img(src="img/icons/telegram.svg" alt="")
+											a(href="#!").main-reviews__link ulpschool.ru
+										.col-xl-9
+											h4.main-reviews__title Екатерина Новикова
+											.main-reviews__subtitle Основатель «ULP ONLINE SCHOOL»
+											.main-reviews__descr 
+												| Анатолий – Вы тот специалист, которого я так долго искала. Исполнительный, пунктуальный, понимаете, что от Вас хотят и выполняете задачу в кратчайшие сроки. 
+												| С Вами очень приятно работать, Вас не надо дергать, Вы обязательный человек. Терпеливо относитесь к заказчику и всем его требованиям. Готовы учиться новому и 
+												| успешно это делаете. Вывод – спасибо за Вашу быстро и качественно сделанную работу в кратчайшие сроки и за дополнительную помощь в подборе материала. Спасибо. 
+												| Надеюсь на дальнейшее сотрудничество.
+					.main-reviews__button-prev
+						img(src="img/icons/arrow-left.svg", alt="")
+					.main-reviews__button-next
+						img(src="img/icons/arrow-right.svg", alt="")
+					.main-reviews__pagination.flex
+						.swiper-pagination
+		section.section.main-blog
+			.container
+				h2.section__subtitle Читайте полезные статьи
+				.row
+					.col-md-6.col-xl-3
+						a(href="#!").article
+							.article__img
+								img(src="img/tilda.jpg", alt="")
+							.article__tag(style="background-color: tomato") Фриланс
+							.article__body
+								.article__title Тильда или верстка?
+								.article__elements.flex
+									.article__element.flex
+										img(src="img/icons/date.svg", alt="").article__element-img
+										.article__element-date 06.11.2020
+					.col-md-6.col-xl-3
+						a(href="#!").article
+							.article__img
+								img(src="img/tilda.jpg", alt="")
+							.article__tag(style="background-color: tomato") Фриланс
+							.article__body
+								.article__title Тильда или верстка?
+								.article__elements.flex
+									.article__element.flex
+										img(src="img/icons/date.svg", alt="").article__element-img
+										.article__element-date 06.11.2020
+					.col-md-6.col-xl-3
+						a(href="#!").article
+							.article__img
+								img(src="img/tilda.jpg", alt="")
+							.article__tag(style="background-color: tomato") Фриланс
+							.article__body
+								.article__title Тильда или верстка?
+								.article__elements.flex
+									.article__element.flex
+											img(src="img/icons/date.svg", alt="").article__element-img
+											.article__element-date 06.11.2020
+					.col-md-6.col-xl-3
+						a(href="#!").article
+							.article__img
+								img(src="img/tilda.jpg", alt="")
+							.article__tag(style="background-color: tomato") Фриланс
+							.article__body
+								.article__title Тильда или верстка?
+								.article__elements.flex
+									.article__element.flex
+										img(src="img/icons/date.svg", alt="").article__element-img
+										.article__element-date 06.11.2020
+				a(href="#!").btn.btn--white.section__button.main-blog__button Показать еще
+		section.section.main-contact
+			.container
+				h2.section__subtitle Я всегда на связи!
+				.main-contact__wrapper.flex
+					a(href="#!").main-contact__item Instagram
+					a(href="#!").main-contact__item Vk
+					a(href="#!").main-contact__item Telegram
+		include ../includes/footer/footer.pug

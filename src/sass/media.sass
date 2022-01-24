@@ -1,0 +1,138 @@
+@media screen and ( max-width: 1250px )
+	.main__socials
+		display: none
+@media screen and ( max-width: 1200px )
+	.main
+		padding-top: 180px
+		padding-bottom: 100px
+		&__title
+			font-size: 30px
+		&-reviews
+			&__title, &__subtitle, &__descr
+				text-align: center
+			&__link
+				margin-bottom: 10px
+	.main-reviews__button-prev
+		left: -35px
+	.main-reviews__button-next
+		right: -35px
+@media screen and ( max-width: 1000px )
+	.header
+		padding: 10px 15px
+		&__menu
+			display: block
+		&__nav
+			display: none
+		&__logo
+			font-size: 18px
+	.main
+		&__circle
+			&-1
+				+size(50px)
+		&-about
+			&__row
+				align-items: flex-start
+			&__advantage
+				&-num
+					font-size: 90px
+	.section
+		padding: 60px 0
+	.blog
+		&__block
+			padding-top: 80px
+		&__back
+			top: 30px
+	.blog__category-container
+		display: none
+	.blog__category-select
+		display: block
+	.page-work
+		padding: 60px 0 0
+		&__img
+			max-height: 400px
+	.page-work-content__title
+		font-size: 30px
+	[data-aos]
+		opacity: 1!important
+		transition-property: none!important
+		transform: none !important
+		animation: none !important
+	.main
+		&__img
+			&--scale
+				max-width: 300px
+				height: 300px
+@media screen and ( max-width: 768px )
+	html
+		font-size: 16px
+	.main
+		padding-top: 120px
+		&__row
+			flex-direction: column-reverse
+		&__img
+			&--scale
+				margin: 0 auto 20px
+		&__circle
+			display: none
+		&__title, &__descr, &-about__text
+			text-align: center
+		&__title
+			line-height: 1
+		&__button
+			margin: 0 auto
+		&-about
+			&__advantage
+				flex-wrap: wrap
+				margin-top: 0
+				&-num
+					font-size: 60px
+					margin-bottom: 0
+				&-item
+					flex-basis: 100%
+					text-align: center
+			&__text
+				p, ul
+					margin-bottom: 10px
+		&-reviews
+			&__item
+				padding: 35px 15px
+			&__button
+				&-prev, &-next
+					display: none
+			&__title
+				line-height: 1.1
+				margin-bottom: 10px
+			&__descr
+				font-size: 14px
+		&-advantage
+			&__col
+				margin-bottom: 2rem
+		&-contact
+			&__item
+				flex-basis: 100%
+	.section
+		&__subtitle
+			font-size: 30px
+			line-height: 1.1
+	.btn
+		font-size: 14px
+	.blog
+		&__title
+			line-height: 1.1
+		&-article
+			&__actual
+				text-align: center
+	.page-work__img
+		max-height: 300px
+	.page-work-content
+		padding: 30px 0
+	.page-work-content__title
+		font-size: 20px
+	.page-work__link
+		margin: 30px auto 0
+	.work__img, .article__img
+		height: auto
+	
+@media screen and ( max-width: 582px )
+	.page-work__img
+		height: auto

@@ -1,18 +1,325 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Портфолио веб-разработчика — фрилансера Анатолия Поршнева</title>
   </head>
-  <body> 
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-6"></div>
-        <div class="col-xl-6"></div>
+  <body>
+    <header class="header">
+      <div class="header__block"><a class="header__logo" href="/">Povlu</a>
+        <div class="header__menu"><span></span><span></span><span></span></div>
+        <nav class="header__nav">
+          <ul class="header__nav-list flex">
+            <li class="header__nav-item"><a class="header__nav-link" href="">Обо мне</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="">Проекты</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="">Отзывы</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="">Блог</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main__socials flex"><a class="main__social" href="#!"> <img src="img/icons/telegram.svg" alt="Telegram" title="Telegram"/></a><a class="main__social" href="#!"><img src="img/icons/vk.svg" alt="Vk" title="VK"/></a><a class="main__social" href="#!"><img src="img/icons/instagram.svg" alt="Instagram" title="Instagram"/></a></div>
+    <section class="main">
+      <div class="container">
+        <div class="row main__row">
+          <div class="col-md-7">
+            <h1 class="main__title">Веб-разработчик, фрилансер</h1>
+            <p class="main__descr">Привет, меня зовут Анатолий Поршнев. Я занимаюсь разработкой и версткой сайта с нуля.</p>
+            <button class="btn btn--blue main__button">Обсудить проект</button>
+          </div>
+          <div class="col-md-5">
+            <div class="main__img main__img--scale"><img src="img/anatoly.png" alt="Фото Анатолия Поршнева"/>
+              <div class="main__circle main__circle-1 circle"></div>
+              <div class="main__circle main__circle-2 circle"></div>
+              <div class="main__circle main__circle-3 circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="main__form flex">
+      <div class="main__form-body">
+        <form class="main__form-item flex">
+          <div class="main__form-close"><span></span><span></span></div>
+          <div class="main__form-title">Расскажите о вашем проекте</div>
+          <div class="main__form-subtitle">Оставьте заявку </div>
+          <input type="email" name="main_email" placeholder="E-mail" required="required" autocomplete="on | off"/>
+          <input type="text" name="main_name" placeholder="Имя и фамилия" required="required" autocomplete="on | off"/>
+          <textarea name="main_message" placeholder="Опишите задачу" required="required" autocomplete="on | off"></textarea>
+          <button type="submit" value="Отправить">Отправить</button>
+        </form>
+      </div>
+      <div class="main__true">
+        <div class="main__true-close"><span></span><span></span></div>
+        <div class="main__true-img"><img src="img/icons/gal.svg" alt=""/></div>
+        <div class="main__true-title">Спасибо!</div>
+        <div class="main__true-text">Сообщение отправлено</div>
       </div>
     </div>
-    <script src="js/script.min.js"> </script>
+    <section class="section main-about">
+      <div class="container">
+        <h2 class="section__subtitle">Давайте знакомиться!</h2>
+        <div class="row main-about__row">
+          <div class="col-md-5">
+            <div class="main__img--scale"><img src="img/anatoly.png" alt="Фото Анатолия Поршнева"/></div>
+          </div>
+          <div class="col-md-7">
+            <div class="main-about__text">
+              <p>Привет! Я Поршнев Анатолий, мне 21 лет. Я веб-разработчик из Беларуси.</p>
+              <p>В 2019 году закончил среднее образование “Программное обеспечение информационных технологий” и ушел в фриланс. </p>
+              <p>Разрабатываю и верстаю сайт с нуля с похожего сайта или дизайна. Настраиваю сайт под CMS Wordpress. Скоро буду разрабатывать сложные сайты на React.</p>
+              <p>Ко мне вы можете обратиться за заказом разработки сайтов.</p>
+            </div>
+          </div>
+        </div>
+        <div class="main-about__advantage flex">
+          <div class="main-about__advantage-item">
+            <div class="main-about__advantage-num">2</div>
+            <div class="main-about__advantage-title">года опыта работы</div>
+          </div>
+          <div class="main-about__advantage-item">
+            <div class="main-about__advantage-num">50+</div>
+            <div class="main-about__advantage-title">довольных клиентов</div>
+          </div>
+          <div class="main-about__advantage-item">
+            <div class="main-about__advantage-num">30+</div>
+            <div class="main-about__advantage-title">реализованных проектов</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section main-work" id="work">
+      <div class="container">
+        <h2 class="section__subtitle">Последние проекты</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="work">
+              <div class="work__new">Новый </div><a class="work__img" href="#!"><img src="./img/ulp.jpg" alt=""/></a>
+              <div class="work__tag">WordPress</div><a href="#!"> 
+                <h3 class="work__title">Верстка и правки “ULP Online School”</h3></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="work">
+              <div class="work__new">Новый </div><a class="work__img" href="#!"><img src="./img/pd.jpg" alt=""/></a>
+              <div class="work__tag">WordPress</div><a href="#!"> 
+                <h3 class="work__title">Верстка и правки “ULP Online School”</h3></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="work">
+              <div class="work__new">Новый </div><a class="work__img" href="#!"><img src="./img/event.jpg" alt=""/></a>
+              <div class="work__tag">WordPress</div><a href="#!"> 
+                <h3 class="work__title">Верстка и правки “ULP Online School”</h3></a>
+            </div>
+          </div>
+        </div><a class="btn btn--white section__button" href="#!">Посмотреть все проекты</a>
+      </div>
+    </section>
+    <section class="section main-advantage">
+      <div class="container">
+        <h2 class="section__subtitle">Умения и навыки</h2>
+        <div class="row main-advantage__block">
+          <div class="col-md-6 col-xl-4 main-advantage__col">
+            <div class="main-advantage__item">
+              <div class="main-advantage__img"><img src="img/icons/programm.svg" alt=""/></div>
+              <h3 class="main-advantage__title">Программирование</h3>
+              <div class="main-advantage__text">
+                <p>JavaScript</p>
+                <p>PHP</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 main-advantage__col">
+            <div class="main-advantage__item">
+              <div class="main-advantage__img"><img src="img/icons/cms.svg" alt="Работа с cms"/></div>
+              <h3 class="main-advantage__title">Работа с CMS</h3>
+              <div class="main-advantage__text">
+                <p>Wordpress</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 main-advantage__col">
+            <div class="main-advantage__item">
+              <div class="main-advantage__img"><img src="img/icons/code.svg" alt=""/></div>
+              <h3 class="main-advantage__title">Верстка</h3>
+              <div class="main-advantage__text">
+                <p>HTML5/PUG</p>
+                <p>CSS/SASS</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 main-advantage__col">
+            <div class="main-advantage__item">
+              <div class="main-advantage__img"><img src="img/icons/box.svg" alt=""/></div>
+              <h3 class="main-advantage__title">Библиотеки</h3>
+              <div class="main-advantage__text">
+                <p>jQuery</p>
+                <p>Bootstrap 4</p>
+                <p>React.js</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4 main-advantage__col">
+            <div class="main-advantage__item">
+              <div class="main-advantage__img"><img src="img/icons/framework.svg" alt=""/></div>
+              <h3 class="main-advantage__title">Сборщик задач</h3>
+              <div class="main-advantage__text">
+                <p>Gulp 4</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section main-reviews">
+      <div class="container">
+        <h2 class="section__subtitle">Отзывы клиентов</h2>
+        <div class="main-reviews__swiper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="main-reviews__item">
+                  <div class="row">
+                    <div class="col-xl-3">
+                      <div class="main-reviews__img"><img class="swiper-lazy" data-src="img/reviews/ulp.jpg"/>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                      </div>
+                      <div class="main-reviews__socials flex"><a class="main-reviews__social" href="#!"><img src="img/icons/vk.svg" alt=""/></a><a class="main-reviews__social" href="#!"><img src="img/icons/telegram.svg" alt=""/></a></div><a class="main-reviews__link" href="#!">ulpschool.ru</a>
+                    </div>
+                    <div class="col-xl-9">
+                      <h4 class="main-reviews__title">Екатерина Новикова</h4>
+                      <div class="main-reviews__subtitle">Основатель «ULP ONLINE SCHOOL»</div>
+                      <div class="main-reviews__descr">
+                         Анатолий – Вы тот специалист, которого я так долго искала. Исполнительный, пунктуальный, понимаете, что от Вас хотят и выполняете задачу в кратчайшие сроки. 
+                        С Вами очень приятно работать, Вас не надо дергать, Вы обязательный человек. Терпеливо относитесь к заказчику и всем его требованиям. Готовы учиться новому и 
+                        успешно это делаете. Вывод – спасибо за Вашу быстро и качественно сделанную работу в кратчайшие сроки и за дополнительную помощь в подборе материала. Спасибо. 
+                        Надеюсь на дальнейшее сотрудничество.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-reviews__item">
+                  <div class="row">
+                    <div class="col-xl-3">
+                      <div class="main-reviews__img"><img class="swiper-lazy" data-src="img/reviews/ulp.jpg"/>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                      </div>
+                      <div class="main-reviews__socials flex"><a class="main-reviews__social" href="#!"><img src="img/icons/vk.svg" alt=""/></a><a class="main-reviews__social" href="#!"><img src="img/icons/telegram.svg" alt=""/></a></div><a class="main-reviews__link" href="#!">ulpschool.ru</a>
+                    </div>
+                    <div class="col-xl-9">
+                      <h4 class="main-reviews__title">Екатерина Новикова</h4>
+                      <div class="main-reviews__subtitle">Основатель «ULP ONLINE SCHOOL»</div>
+                      <div class="main-reviews__descr">
+                         Анатолий – Вы тот специалист, которого я так долго искала. Исполнительный, пунктуальный, понимаете, что от Вас хотят и выполняете задачу в кратчайшие сроки. 
+                        С Вами очень приятно работать, Вас не надо дергать, Вы обязательный человек. Терпеливо относитесь к заказчику и всем его требованиям. Готовы учиться новому и 
+                        успешно это делаете. Вывод – спасибо за Вашу быстро и качественно сделанную работу в кратчайшие сроки и за дополнительную помощь в подборе материала. Спасибо. 
+                        Надеюсь на дальнейшее сотрудничество.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="main-reviews__item">
+                  <div class="row">
+                    <div class="col-xl-3">
+                      <div class="main-reviews__img"><img class="swiper-lazy" data-src="img/reviews/ulp.jpg"/>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                      </div>
+                      <div class="main-reviews__socials flex"><a class="main-reviews__social" href="#!"><img src="img/icons/vk.svg" alt=""/></a><a class="main-reviews__social" href="#!"><img src="img/icons/telegram.svg" alt=""/></a></div><a class="main-reviews__link" href="#!">ulpschool.ru</a>
+                    </div>
+                    <div class="col-xl-9">
+                      <h4 class="main-reviews__title">Екатерина Новикова</h4>
+                      <div class="main-reviews__subtitle">Основатель «ULP ONLINE SCHOOL»</div>
+                      <div class="main-reviews__descr">
+                         Анатолий – Вы тот специалист, которого я так долго искала. Исполнительный, пунктуальный, понимаете, что от Вас хотят и выполняете задачу в кратчайшие сроки. 
+                        С Вами очень приятно работать, Вас не надо дергать, Вы обязательный человек. Терпеливо относитесь к заказчику и всем его требованиям. Готовы учиться новому и 
+                        успешно это делаете. Вывод – спасибо за Вашу быстро и качественно сделанную работу в кратчайшие сроки и за дополнительную помощь в подборе материала. Спасибо. 
+                        Надеюсь на дальнейшее сотрудничество.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-reviews__button-prev"><img src="img/icons/arrow-left.svg" alt=""/></div>
+          <div class="main-reviews__button-next"><img src="img/icons/arrow-right.svg" alt=""/></div>
+          <div class="main-reviews__pagination flex">
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section main-blog">
+      <div class="container">
+        <h2 class="section__subtitle">Читайте полезные статьи</h2>
+        <div class="row">
+          <div class="col-md-6 col-xl-3"><a class="article" href="#!">
+              <div class="article__img"><img src="img/tilda.jpg" alt=""/></div>
+              <div class="article__tag" style="background-color: tomato">Фриланс</div>
+              <div class="article__body">
+                <div class="article__title">Тильда или верстка?</div>
+                <div class="article__elements flex">
+                  <div class="article__element flex"><img class="article__element-img" src="img/icons/date.svg" alt=""/>
+                    <div class="article__element-date">06.11.2020</div>
+                  </div>
+                </div>
+              </div></a></div>
+          <div class="col-md-6 col-xl-3"><a class="article" href="#!">
+              <div class="article__img"><img src="img/tilda.jpg" alt=""/></div>
+              <div class="article__tag" style="background-color: tomato">Фриланс</div>
+              <div class="article__body">
+                <div class="article__title">Тильда или верстка?</div>
+                <div class="article__elements flex">
+                  <div class="article__element flex"><img class="article__element-img" src="img/icons/date.svg" alt=""/>
+                    <div class="article__element-date">06.11.2020</div>
+                  </div>
+                </div>
+              </div></a></div>
+          <div class="col-md-6 col-xl-3"><a class="article" href="#!">
+              <div class="article__img"><img src="img/tilda.jpg" alt=""/></div>
+              <div class="article__tag" style="background-color: tomato">Фриланс</div>
+              <div class="article__body">
+                <div class="article__title">Тильда или верстка?</div>
+                <div class="article__elements flex">
+                  <div class="article__element flex"><img class="article__element-img" src="img/icons/date.svg" alt=""/>
+                    <div class="article__element-date">06.11.2020</div>
+                  </div>
+                </div>
+              </div></a></div>
+          <div class="col-md-6 col-xl-3"><a class="article" href="#!">
+              <div class="article__img"><img src="img/tilda.jpg" alt=""/></div>
+              <div class="article__tag" style="background-color: tomato">Фриланс</div>
+              <div class="article__body">
+                <div class="article__title">Тильда или верстка?</div>
+                <div class="article__elements flex">
+                  <div class="article__element flex"><img class="article__element-img" src="img/icons/date.svg" alt=""/>
+                    <div class="article__element-date">06.11.2020</div>
+                  </div>
+                </div>
+              </div></a></div>
+        </div><a class="btn btn--white section__button main-blog__button" href="#!">Показать еще</a>
+      </div>
+    </section>
+    <section class="section main-contact">
+      <div class="container">
+        <h2 class="section__subtitle">Я всегда на связи!</h2>
+        <div class="main-contact__wrapper flex"><a class="main-contact__item" href="#!">Instagram</a><a class="main-contact__item" href="#!">Vk</a><a class="main-contact__item" href="#!">Telegram</a></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__block flex">
+          <div class="footer__copy">@2020 Все права защищены</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

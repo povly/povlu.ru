@@ -1,0 +1,107 @@
+include mixins.pug
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="css/swiper-bundle.min.css")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Портфолио веб-разработчика — фрилансера Анатолия Поршнева
+	body
+		header.header
+			.header__block
+				a(href="/").header__logo Povlu
+				.header__menu
+					span
+					span
+					span
+				nav.header__nav
+					ul.header__nav-list.flex
+						+headerNavItem('Обо мне')
+						+headerNavItem('Проекты')
+						+headerNavItem('Отзывы')
+						+headerNavItem('Блог')
+		.main__socials.flex
+			a(href="#!").main__social 
+				img(src="img/icons/telegram.svg", alt="Telegram" title="Telegram")
+			a(href="#!").main__social
+				img(src="img/icons/vk.svg", alt="Vk" title="VK")
+			a(href="#!").main__social
+				img(src="img/icons/instagram.svg", alt="Instagram" title="Instagram")
+		section.section.blog(style="background-image:url('../img/ulp.jpg')")
+			.container
+				.blog__block
+					a(href="#!").blog__back.flex
+						img(src="img/icons/blog-arrow.svg", alt="")
+						.blog__back-title К списку статей
+					.article__tag(style="background-color:tomato") Фриланс
+					h1.blog__title Тильда или верстка?
+					p.blog__descr Подборка киноработ о технологиях, искусственном интеллекте, роботах, хакерах, программистах, ученых, научных разработках и открытиях. Все, что точно будет интересно посмотреть айтишникам на досуге.
+		section.blog-article
+			.container
+				.row
+					.col-xl-9
+						.blog-article__content
+							h2 Что выбрать Тильда или верстка?
+							p Начнем с Тильды. Тильда — это конструктор, который позволяет сделать сайт без знании кода. Я не работал в Тильде, и не могу точно сказать о нем, но напишу что я знаю. В этом конструкторе любой сможет быстро и легко сделать сайт, чем на верстке. Это понятно, есть готовые элементы, блоки, анимации и разные инструменты, но он ограниченный в плане функций. Чтобы получить больше возможностей и если не хватает чего-то, можно взять дополнение Zero Block, по сути все бесплатное, иначе платное.
+							p Теперь о верстке. Я занимаюсь версткой, здесь нужно работать с кодом. Тут много чего надо знать и уметь. Приведу краткий и минимальный пример, что надо знать:
+							p — HTML (структура страницы)
+							p — CSS (стили)
+							p — JS (программирование)
+							p — адаптивность (мобильная версия)
+							p — кроссбраузерность (выглядит одинаково во всех браузерах)
+							p — сборка задач Gulp (автоматизация задач, таких как уменьшить размер файла изображения, не теряя качество)
+							p Я знаю больше, чем здесь написано. Чем больше знаешь, тем лучше. В верстке все чисто и без лишних мусоров делается. А что выбирать? Тильду или верстку? Тут каждый выбирает по своему. Дизайнерам будет хорошее дополнение, если будет работать с Тильдой. Также есть клиенты, которые не могут заказать верстку, потому что дорого и долго. Я даже постоянно вижу в какой-то чате или группе, что клиент написал «нужно сверстать сайт за отзыв или дешево». Это треш какой-то, не ценит труд верстальщика. Словно работа за отзыв или за еду))
+					.col-xl-3
+						.blog-article__actual Актуальное
+						.row
+							.col-md-6.col-xl-12
+								a(href="#!").article
+									.article__img
+										img(src="img/tilda.jpg", alt="")
+									.article__tag(style="background-color: tomato") Фриланс
+									.article__body
+										.article__title Тильда или верстка?
+										.article__elements.flex
+											.article__element.flex
+												img(src="img/icons/date.svg", alt="").article__element-img
+												.article__element-date 06.11.2020
+							.col-md-6.col-xl-12
+								a(href="#!").article
+									.article__img
+										img(src="img/tilda.jpg", alt="")
+									.article__tag(style="background-color: tomato") Фриланс
+									.article__body
+										.article__title Тильда или верстка?
+										.article__elements.flex
+											.article__element.flex
+												img(src="img/icons/date.svg", alt="").article__element-img
+												.article__element-date 06.11.2020
+							.col-md-6.col-xl-12
+								a(href="#!").article
+									.article__img
+										img(src="img/tilda.jpg", alt="")
+									.article__tag(style="background-color: tomato") Фриланс
+									.article__body
+										.article__title Тильда или верстка?
+										.article__elements.flex
+											.article__element.flex
+													img(src="img/icons/date.svg", alt="").article__element-img
+													.article__element-date 06.11.2020
+							.col-md-6.col-xl-12
+								a(href="#!").article
+									.article__img
+										img(src="img/tilda.jpg", alt="")
+									.article__tag(style="background-color: tomato") Фриланс
+									.article__body
+										.article__title Тильда или верстка?
+										.article__elements.flex
+											.article__element.flex
+												img(src="img/icons/date.svg", alt="").article__element-img
+												.article__element-date 06.11.2020
+		footer.footer
+			.container
+				.footer__block.flex
+					.footer__copy @2020 Все права защищены
+		script(src="js/swiper-bundle.min.js")
+		script(src="js/script.min.js")

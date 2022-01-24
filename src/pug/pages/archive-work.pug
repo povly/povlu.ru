@@ -1,0 +1,63 @@
+include mixins.pug
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="css/swiper-bundle.min.css")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Портфолио веб-разработчика — фрилансера Анатолия Поршнева
+	body
+		header.header
+			.header__block
+				a(href="/").header__logo Povlu
+				.header__menu
+					span
+					span
+					span
+				nav.header__nav
+					ul.header__nav-list.flex
+						+headerNavItem('Обо мне')
+						+headerNavItem('Проекты')
+						+headerNavItem('Отзывы')
+						+headerNavItem('Блог')
+		.main__socials.flex
+			a(href="#!").main__social 
+				img(src="img/icons/telegram.svg", alt="Telegram" title="Telegram")
+			a(href="#!").main__social
+				img(src="img/icons/vk.svg", alt="Vk" title="VK")
+			a(href="#!").main__social
+				img(src="img/icons/instagram.svg", alt="Instagram" title="Instagram")
+		section.section.blog-work
+			.container
+				h2.section__subtitle Проекты
+				.blog__category-block
+					.blog__category-container.flex
+						a(href="#!").blog__category.active(style="border-color:#007bff; background-color:#007bff") Все статьи
+						a(href="#!").blog__category.active(style="border-color:tomato; color: tomato;" ) Фриланс
+					select.blog__category-select
+						option(value="Все статьи") Все проекты
+						option(value="Фриланс") WordPress
+				.row
+					+mainWorkItem('./img/ulp.jpg', 'WordPress', 'Верстка и правки “ULP Online School”')
+					+mainWorkItem('./img/pd.jpg', 'WordPress', 'Верстка и правки “ULP Online School”')
+					+mainWorkItem('./img/event.jpg', 'WordPress', 'Верстка и правки “ULP Online School”')
+				ul.blog-archive__pagination.flex
+					li.pagination-prev
+						a(href="#!")
+							img(src="img/icons/left-arrow-black.svg", alt="")
+					li.pagination-number 
+						a(href="#!") 1
+					li.pagination-number.active
+						a(href="#!") 2
+					li.pagination-number 
+						a(href="#!") 3
+					li.pagination-next
+						a(href="#!")
+							img(src="img/icons/left-arrow-black.svg", alt="")
+		footer.footer
+			.container
+				.footer__block.flex
+					.footer__copy @2020 Все права защищены
+		script(src="js/swiper-bundle.min.js")
+		script(src="js/script.min.js")
