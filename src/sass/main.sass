@@ -1,21 +1,18 @@
 @import common/fonts
+@import common/vars
 @import ./../../node_modules/normalize.css/normalize
 @import common/reset
 @import common/bootstrap
-@import common/vars
-=size($size)
-  width: $size
-  height: $size
+@import common/mixins
 	
 // critical css
-@import './blocks/header'
+@import includes/header/header
 @import './pages/main/main'
 @import common/tools-main
 @import media-main
 
 @import './../../node_modules/swiper/swiper-bundle'
 @import common/tools
-@import './blocks/footer'
 @import './pages/blog/blog'
 @import './pages/work/work'
 @import includes/footer/footer

@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (document.querySelector('.main-reviews')) {
-		var reviewSwiper = new Swiper('.main-reviews .swiper-container', {
+		var reviewSwiper = new Swiper('.main-reviews .swiper', {
 			lazy: true,
 			spaceBetween: 30,
 			speed: 500,

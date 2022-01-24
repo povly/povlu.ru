@@ -20,13 +20,13 @@
 	cursor: pointer
 	white-space: nowrap
 	&--white
-		border-color: #000000
+		border-color: var(--color-black)
 		&:hover
 			border-color: var(--color-blue)
 			background-color: var(--color-blue)
-			color: #ffffff
+			color: var(--color-white)
 	&--blue
-		color: #ffffff
+		color: var(--color-white)
 		background-color:	var(--color-blue)
 		border-color: var(--color-blue)
 		&:hover
@@ -97,7 +97,7 @@
 		border-radius: 0 5px 5px 0px
 		font-size: 10px
 		font-weight: 500
-		color: #ffffff
+		color: var(--color-white)
 		line-height: 1
 		background-color: tomato
 	&__body
@@ -145,7 +145,7 @@
 			justify-content: center
 			a
 				cursor: default
-				color: #ffffff
+				color: var(--color-white)
 				&:hover
 					color: inherit
 @keyframes translateY
