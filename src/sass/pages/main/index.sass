@@ -1,0 +1,135 @@
+.main
+	padding-top: 240px
+	padding-bottom: 170px
+	height: 100vh
+	&__title, &__descr
+		margin-bottom: 25px
+	&__title
+		font-size: 36px
+	&__descr
+		max-width: 500px
+		line-height: 25px
+	&__row
+		align-items: center
+	&__img
+		position: relative
+		&--scale
+			max-width: 400px
+			height: 400px
+			transition: .3s
+			&:hover
+				transform: scale(1.1)
+			img
+				width: 100%
+				height: 100%
+				border-radius: 100%
+	&__socials
+		z-index: 3
+		top: 50%
+		right: 20px
+		transform: translateY(-50%)
+		flex-direction: column
+	&__social
+		display: table
+		position: relative
+		transition: .3s
+		img, svg
+			+size(40px)
+		&:hover
+			transform: translateX(-5px)
+		&:not(:last-child)
+			margin-bottom: 10px
+	&__form
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(var(--color-black), 0.7)
+		z-index: -1
+		visibility: hidden
+		opacity: 0
+		align-items: center
+		cursor: pointer
+		justify-content: center
+		transition: .3s
+		-webkit-overflow-scrolling: touch
+		&.active
+			z-index: 19999
+			visibility: visible
+			opacity: 1
+		&-body
+			&.hidden
+				z-index: -1
+				visibility: hidden
+				opacity: 0
+		&-item
+			background-color: var(--color-white)
+			padding: 40px
+			flex-direction: column
+			text-align: center
+			position: relative
+			margin-left: 15px
+			margin-right: 15px
+			cursor: default
+		&-title
+			font-size: 25px
+			font-weight: 500
+			color: var(--color-blue)
+			line-height: 1
+			margin-bottom: 5px
+		&-subtitle
+			margin-bottom: 20px
+		input, textarea
+			margin-bottom: 20px
+			border: 1px solid var(--color-blue)
+			padding: 10px
+		button
+			padding: 10px 0
+			border: 1px solid var(--color-blue)
+			color: var(--color-black)
+			background-color: #fff
+			transition: .3s
+			&:hover
+				background-color: var(--color-blue)
+				color: var(--color-white)
+	&__form-close, &__true-close
+		position: absolute
+		top: 5px
+		right: 5px
+		width: 30px
+		height: 30px
+		cursor: pointer
+		span
+			width: 100%
+			height: 2px 
+			background-color: var(--color-black)
+			display: block
+			&:first-child
+				transform: translateY(13px) rotate(45deg)
+			&:last-child
+				transform: translateY(11px) rotate(-45deg)
+	&__true
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: var(--color-white)
+		padding: 40px
+		box-shadow: 0 0 10px 10px rgba(0,0,0,.1)
+		text-align: center
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&-img
+			+size(100px)
+			margin: 0 auto 20px
+		&-title
+			color: var(--color-blue)
+			font-size: 30px
+		&-text
+			white-space: nowrap
+		&.active
+			z-index: 199999
+			visibility: visible
+			opacity: 1

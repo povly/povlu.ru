@@ -1,20 +1,16 @@
 .header
-	position: fixed
 	top: 0
 	left: 0
-	width: 100%
 	padding: 15px 30px
-	box-shadow: 4px 0 20px -5px rgba(0,0,0,.1)
-	background-color: var(--color-white)
-	z-index: 199
+	z-index: 5
 	&__block
-		display: flex
 		align-items: center
 		justify-content: space-between
 	&__logo
 		font-weight: bold
 		text-transform: uppercase
-		font-size: 24px
+		font-size: 26px
+		margin-right: auto
 	&__menu
 		display: none
 		width: 30px
@@ -50,6 +46,7 @@
 					transform: translateY(-50%) rotate(-45deg)
 	&__nav
 		transition: all .3s
+		margin-right: 40px
 		&-list
 			align-items: center
 		&-item
@@ -74,3 +71,10 @@
 				margin-bottom: 10px
 			.header__nav-item a
 				font-size: 20px
+	&__theme
+		width: 20px
+		height: 20px
+		cursor: pointer
+		&-svg
+			path
+				fill: var(--color-black)

@@ -64,8 +64,10 @@ function browsersync(){
 
 function scripts() {
 	return src([
-		'node_modules/jquery/dist/jquery.min.js',
-		'./node_modules/swiper/swiper-bundle.min.js',
+		// 'node_modules/jquery/dist/jquery.min.js',
+		// 'src/js/gsap-core.js',
+		// 'src/js/ScrollTrigger.js',
+		'./node_modules/swiper/swiper-bundle.js',
 		'src/js/main.js',
 		])
 	.pipe(babel({

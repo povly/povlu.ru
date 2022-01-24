@@ -7,8 +7,8 @@
     <title>Портфолио веб-разработчика — фрилансера Анатолия Поршнева</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__block"><a class="header__logo" href="/">Povlu</a>
+    <header class="header width__full absolute">
+      <div class="header__block flex"><a class="header__logo" href="/">Povlu</a>
         <div class="header__menu"><span></span><span></span><span></span></div>
         <nav class="header__nav">
           <ul class="header__nav-list flex">
@@ -18,19 +18,32 @@
             <li class="header__nav-item"><a class="header__nav-link" href="">Блог</a></li>
           </ul>
         </nav>
+        <div class="header__theme"><svg class="header__theme-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.919 285.919"><path d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z"></path></svg></div>
       </div>
     </header>
-    <div class="main__socials flex"><a class="main__social" href="#!"> <img src="img/icons/telegram.svg" alt="Telegram" title="Telegram"/></a><a class="main__social" href="#!"><img src="img/icons/vk.svg" alt="Vk" title="VK"/></a><a class="main__social" href="#!"><img src="img/icons/instagram.svg" alt="Instagram" title="Instagram"/></a></div>
-    <section class="main">
+    <div class="loader__overlay width__full flex"><div class="loader">
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+<div class="relative"></div>
+</div>
+    </div>
+    <section class="main relative">
+      <div class="main__socials flex absolute"><a class="main__social" href="#!"> <img src="img/icons/telegram.svg" alt="Telegram" title="Telegram"/></a><a class="main__social" href="#!"><img src="img/icons/vk.svg" alt="Vk" title="VK"/></a><a class="main__social" href="#!"><img src="img/icons/instagram.svg" alt="Instagram" title="Instagram"/></a><a class="main__social" href="#!"><img src="img/icons/github.svg" alt="Instagram" title="Instagram"/></a></div>
       <div class="container">
         <div class="row main__row">
-          <div class="col-md-7">
+          <div class="col-md-7 main__left">
             <h1 class="main__title">Веб-разработчик, фрилансер</h1>
-            <p class="main__descr">Привет, меня зовут Анатолий Поршнев. Я занимаюсь разработкой и версткой сайта с нуля.</p>
+            <p class="main__descr">Привет, меня зовут Анатолий Поршнев. Я занимаюсь разработкой и версткой сайта с нуля более 2-х лет</p>
             <button class="btn btn--blue main__button">Обсудить проект</button>
           </div>
-          <div class="col-md-5">
-            <div class="main__img main__img--scale"><img src="img/anatoly.png" alt="Фото Анатолия Поршнева"/>
+          <div class="col-md-5 main__right">
+            <div class="main__img main__img--scale"><img src="img/main.jpg" alt="Фото Анатолия Поршнева"/>
               <div class="main__circle main__circle-1 circle"></div>
               <div class="main__circle main__circle-2 circle"></div>
               <div class="main__circle main__circle-3 circle"></div>
@@ -60,16 +73,16 @@
     </div>
     <section class="section main-about">
       <div class="container">
-        <h2 class="section__subtitle">Давайте знакомиться!</h2>
+        <h2 class="section__subtitle main-about__title">Давайте знакомиться!</h2>
         <div class="row main-about__row">
           <div class="col-md-5">
-            <div class="main__img--scale"><img src="img/anatoly.png" alt="Фото Анатолия Поршнева"/></div>
+            <div class="main__img--scale main-about__img"><img src="img/anatoly.png" alt="Фото Анатолия Поршнева"/></div>
           </div>
           <div class="col-md-7">
             <div class="main-about__text">
-              <p>Привет! Я Поршнев Анатолий, мне 21 лет. Я веб-разработчик из Беларуси.</p>
+              <p>Привет! Я Поршнев Анатолий, мне 22 года. Я веб-разработчик, верстальщик, фуллстек из Беларуси.</p>
               <p>В 2019 году закончил среднее образование “Программное обеспечение информационных технологий” и ушел в фриланс. </p>
-              <p>Разрабатываю и верстаю сайт с нуля с похожего сайта или дизайна. Настраиваю сайт под CMS Wordpress. Скоро буду разрабатывать сложные сайты на React.</p>
+              <p>Разрабатываю и верстаю сайт с нуля с дизайна. Настраиваю сайт под CMS Wordpress и WooCommerce.</p>
               <p>Ко мне вы можете обратиться за заказом разработки сайтов.</p>
             </div>
           </div>
@@ -319,7 +332,8 @@
           <div class="footer__copy">@2020 Все права защищены</div>
         </div>
       </div>
-    </footer>
+    </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
